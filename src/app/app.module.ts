@@ -3,22 +3,26 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { AppComponent } from './app.component';
 import { AppRoutingModule, routingComponents } from './app-routing-module';
-import { FooterComponent } from './footer/footer.component';
-
+import { FormsModule } from '@angular/forms';
+import { EmailService } from './shared/services/email.service';
+import { HttpClientModule } from '@angular/common/http';
  
 @NgModule({
    declarations: [
       AppComponent,
-      routingComponents,
-   
+      routingComponents
    ],
    imports: [
       BrowserModule,
+      FormsModule, 
+      HttpClientModule, 
       MDBBootstrapModule.forRoot(),
       AppRoutingModule
   ],
   schemas: [NO_ERRORS_SCHEMA],
-  providers: [],
+  providers: [
+    EmailService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
