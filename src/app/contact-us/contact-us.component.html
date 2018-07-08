@@ -1,46 +1,86 @@
 <app-nav-bar></app-nav-bar>
-<main role="main" class="container  py-5">
-    <section class="pt-5">
-        <h2 class="h1 font-weight-bold text-center mb-5 pt-4">Contact Us for a
-            <u>Fair</u> Quote</h2>
-        <div class="row">
-            <div class="alert alert-warning col-md-6 offset-3" role="alert" *ngIf="(error)">
-                {{error}}
-            </div> 
-        </div>        
-        <div class="form responsive">
-            <div class="md-form">
-              <i class="fa fa-user prefix grey-text"></i>
-              <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"
-                class="form-control" mdbInputDirective>
-              <label for="contactFormName">Your name</label>
+<main role="main" class="container">
+
+  <section class="pt-5 py-4 text-center text-lg-left">
+    <h2 class="h1 font-weight-bold text-center mb-5 pt-4">Contact Us for a
+      <u>Fair</u> Quote</h2>
+
+    <div class="row pb-5">
+      <div class="alert alert-warning col-md-6 offset-3" role="alert" *ngIf="(error)">
+        {{error}}
+      </div>
+      <div class="col-md-8 offset-2 mb-md-0 mb-5">
+        <form>
+
+          <!--Grid row-->
+          <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-6">
+              <div class="md-form mb-0">
+                <i class="fa fa-user prefix grey-text"></i>
+                <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" class="form-control" mdbInputDirective>
+                <label for="contactFormName">Your name</label>
+              </div>
             </div>
-            <div class="md-form">
-              <i class="fa fa-envelope prefix grey-text"></i>
-              <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" 
-                class="form-control" mdbInputDirective>
-              <label for="contactFormEmail">Your email</label>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-6">
+              <div class="md-form mb-0">
+                <i class="fa fa-envelope prefix grey-text"></i>
+                <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" mdbInputDirective>
+                <label for="contactFormEmail">Your email</label>
+              </div>
             </div>
-  
-            <div class="md-form">
-              <i class="fa fa-mobile prefix grey-text"></i>
-              <input type="text" [(ngModel)]="number" [ngModelOptions]="{standalone: true}" 
-                class="form-control" mdbInputDirective>
-              <label for="contactFormSubject">Your cell number</label>
-            </div>
-  
-            <div class="md-form">
-              <i class="fa fa-pencil prefix grey-text"></i>
-              <textarea type="text" [(ngModel)]="message" [ngModelOptions]="{standalone: true}" 
-                class="md-textarea" style="height: 100px" mdbInputDirective></textarea>
-              <label for="contactFormMessage">Your message</label>
-            </div>
-            <div class="text-center">
-              <button type="submit" class="btn btn-unique waves-light" (click)="Send()" mdbWavesEffect>Send
-                <i class="fa fa-paper-plane-o ml-1"></i>
-              </button>
+            <!--Grid column-->
+
+          </div>
+          <!--Grid row-->
+
+          <!--Grid row-->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="md-form mb-0">
+                <i class="fa fa-mobile prefix grey-text"></i>
+                <input type="text" [(ngModel)]="number" [ngModelOptions]="{standalone: true}" class="form-control" mdbInputDirective>
+                <label for="contactFormSubject">Your cell number</label>
+              </div>
             </div>
           </div>
-    </section>
+          <!--Grid row-->
+
+          <!--Grid row-->
+          <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-12">
+
+              <div class="md-form">
+                <i class="fa fa-pencil prefix grey-text"></i>
+                <textarea type="text" [(ngModel)]="message" [ngModelOptions]="{standalone: true}" class="md-textarea" style="height: 100px"
+                  mdbInputDirective></textarea>
+                <label for="contactFormMessage">Your message</label>
+              </div>
+
+            </div>
+          </div>
+          <!--Grid row-->
+
+        </form>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-unique waves-light" (click)="Send()" mdbWavesEffect>Send
+              <i class="fa fa-paper-plane-o ml-1"></i>
+            </button>
+          </div>
+      </div>
+      <!--Grid column-->
+
+
+    </div>
+
+
+  </section>
 </main>
 <app-footer></app-footer>

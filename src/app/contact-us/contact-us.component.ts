@@ -19,10 +19,9 @@ export class ContactUsComponent implements OnInit {
   ngOnInit() {
   }
 
-  Send() {
-    debugger
+  Send() {     
     this.error = undefined;
-    alert(this.email)
+   
     if(this.email === undefined || this.email === ""
       || this.number === undefined || this.number === ""
       || this.name === undefined || this.name === ""
