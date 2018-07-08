@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { EmailService } from './shared/services/email.service';
 import { HttpClientModule } from '@angular/common/http';
  
+ 
 @NgModule({
    declarations: [
       AppComponent,
@@ -14,8 +15,8 @@ import { HttpClientModule } from '@angular/common/http';
    ],
    imports: [
       BrowserModule,
-      FormsModule, 
-      HttpClientModule, 
+      FormsModule,
+      HttpClientModule,
       MDBBootstrapModule.forRoot(),
       AppRoutingModule
   ],

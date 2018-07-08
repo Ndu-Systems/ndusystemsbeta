@@ -8,12 +8,14 @@ import { FooterComponent } from "./footer/footer.component";
 import { ServicesComponent } from "./services/services.component";
 import { MyServicesComponent } from "./services/my-services/my-services.component";
 import { ContactUsComponent } from "./contact-us/contact-us.component";
+import { AboutUsComponent } from "./about-us/about-us.component";
 
 //Create routes here with components
 const routes: Routes = [
     { path: "", component: HomeComponent },
     { path: "services", component: ServicesComponent },
-    {path: "contact-us", component: ContactUsComponent},
+    { path: "contact-us", component: ContactUsComponent },
+    { path: "about-us", component: AboutUsComponent },
     { path: "**", component: HomeComponent }
 ];
 
@@ -26,7 +28,8 @@ export const routingComponents = [
     FooterComponent,
     ServicesComponent,
     MyServicesComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    AboutUsComponent
 ];
 
 @NgModule({
